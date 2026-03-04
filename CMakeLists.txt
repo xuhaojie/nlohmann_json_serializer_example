@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.10)
-project(json_serializer_example)
+project(nlohmann_json_optional)
 
 # 设置C++标准
 set(CMAKE_CXX_STANDARD 17)
@@ -17,9 +17,9 @@ else()
 endif()
 
 # 添加可执行文件
-add_executable(json_example src/main.cpp)
+add_executable(nlohmann_json_optional src/main.cpp)
 
 # 链接系统库（若找到）
 if(nlohmann_json_FOUND)
-    target_link_libraries(json_example PRIVATE nlohmann_json::nlohmann_json)
+    target_link_libraries(nlohmann_json_optional PRIVATE nlohmann_json::nlohmann_json)
 endif()
